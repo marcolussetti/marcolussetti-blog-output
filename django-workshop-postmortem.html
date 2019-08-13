@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8"> 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Marco Lussetti" />
-        <meta name="copyright" content="Marco Lussetti" />
+<html lang="en">
 
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma-extensions@6/bulma-tooltip/dist/css/bulma-tooltip.min.css">
+
+    <meta name="author" content="Marco Lussetti" />
+
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary">
 
 <meta name="keywords" content="workshop, django, python, flask, Thompson Rivers University, Workshop, " />
 
@@ -21,52 +26,44 @@
 <meta name="twitter:title" content="Django Workshop Postmortem ">
 <meta name="twitter:description" content="Workshops and I I feel like in University, we get a lot of exposure to the theoretical side of computing science, but at least in my experience, we don&#39;t really thinker around with stuff all that much. One of the things I&#39;ve tried to do since I joined my university&#39;s …">
 
-        <title>Django Workshop Postmortem  · Becoming an Engineer?
+    <title>Django Workshop Postmortem  · Becoming an Engineer?
 </title>
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="./theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
-    </head>
-    <body>
-        <div id="content-sans-footer">
-        <div class="navbar navbar-static-top">
-            <div class="navbar-inner">
-                <div class="container-fluid">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="./"><span class=site-name>Becoming an Engineer?</span></a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav pull-right top-menu">
-                            <li ><a href=".">Home</a></li>
-                            <li ><a href="./categories.html">Categories</a></li>
-                            <li ><a href="./tags.html">Tags</a></li>
-                            <li ><a href="./archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
+        rel="stylesheet">
+    <!-- <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./theme/tipuesearch/tipuesearch.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./theme/css/admonition.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+
+
+
+    <!-- Added custom stuff -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <script defer src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div id="content">
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="span1"></div>
                 <div class="span10">
-<article>
+<article itemscope>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="./django-workshop-postmortem.html"> Django Workshop Postmortem  </a></h1>
+        <h1>
+            <a href="./django-workshop-postmortem.html">
+                Django Workshop Postmortem
+            </a>
+        </h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
-
             
             <h2 id="workshops-and-i">Workshops and I</h2>
 <p>I feel like in University, we get a lot of exposure to the theoretical side of computing science, but at least in my experience, we don't really thinker around with stuff all that much.</p>
@@ -117,31 +114,36 @@
 </ul>
 </li>
 </ul>
+
+
             
             
+            
+
+
             <hr/>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2017-07-05T00:00:00-07:00">Jul 5, 2017</time>
+            <time itemprop="dateCreated" datetime="2017-07-05T00:00:00-07:00">Jul 5, 2017</time>
             <h4>Category</h4>
             <a class="category-link" href="./categories.html#workshop-ref">Workshop</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags.html#django-ref">django
+                <li><a href="./tags#django-ref">django
                     <span>1</span>
 </a></li>
-                <li><a href="./tags.html#flask-ref">flask
+                <li><a href="./tags#flask-ref">flask
                     <span>1</span>
 </a></li>
-                <li><a href="./tags.html#python-ref">python
+                <li><a href="./tags#python-ref">python
                     <span>2</span>
 </a></li>
-                <li><a href="./tags.html#thompson-rivers-university-ref">Thompson Rivers University
+                <li><a href="./tags#thompson-rivers-university-ref">Thompson Rivers University
                     <span>2</span>
 </a></li>
-                <li><a href="./tags.html#workshop-ref">workshop
+                <li><a href="./tags#workshop-ref">workshop
                     <span>2</span>
 </a></li>
             </ul>
@@ -150,6 +152,18 @@
     <i class="fa fa-you can add links in your config file sidebar-social-links"></i></a>
     <a href="#" title="My Another social link Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-another social link sidebar-social-links"></i></a>
+            
+
+
+
+
+
+            
+
+
+
+
+
         </div>
         </section>
 </div>
@@ -158,25 +172,128 @@
                 <div class="span1"></div>
             </div>
         </div>
-        <div id="push"></div>
     </div>
 <footer>
-<div id="footer">
-    <ul class="footer-content">
-        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
-    </ul>
-</div>
-</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script>
-            function validateForm(query)
-            {
-                return (query.length > 0);
-            }
-        </script>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow">Elegant</a>
+    </div>
+</footer>        <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script>
+        function validateForm(query) {
+            return (query.length > 0);
+        }
+    </script>
 
     
-    </body>
-    <!-- Theme: Elegant built for Pelican
-    License : http://oncrashreboot.com/pelican-elegant -->
+
+    <script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementById('comment-accordion-toggle');
+    var old_innerHTML = link.innerHTML;
+    $(link).fadeOut(200, function() {
+        $(this).text('Click here to hide comments').fadeIn(200);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link).fadeOut(200, function() {
+            $(this).text(old_innerHTML).fadeIn(200);
+        });
+    })
+})
+</script>
+
+
+    <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/images/logo/128x128.png">
+                <span>Marco</span>
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="bottom-navbar-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="bottom-navbar-menu" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                    Home
+                </a>
+
+                <a class="navbar-item tooltip" data-tooltip="Projects, Papers, Workshops, and Presentations"
+                    href="/projects.html">
+                    Projects
+                </a>
+
+                <a class="navbar-item tooltip" data-tooltip="Learn more about me" href="/about.html">
+                    About
+                </a>
+
+                <a class="navbar-item" href="mailto:contact@marcolussetti.com">
+                    <span class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </a>
+                <a class="navbar-item" href="https://github.com/marcolussetti">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                </a>
+                <a class="navbar-item" href="https://linkedin.com/in/lussetti">
+                    <span class="icon">
+                        <i class="fab fa-linkedin"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a class="navbar-item" href= . >Blog Home</a>
+
+
+                    <a class="navbar-item"
+                        href="./categories">Categories</a>
+
+                    <a class="navbar-item" href="./tags">Tags</a>
+
+                    <a class="navbar-item" href="./archives">Archives</a>
+
+                    <div class="navbar-item">
+                        <form class="navbar-search" action="./search.html"
+                            onsubmit="return validateForm(this.elements['q'].value);"> <input type="text"
+                                class="search-query" placeholder="Search" name="q" id="tipue_search_input">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+<!-- Theme: Elegant built for Pelican
+        License : MIT -->
+
 </html>
